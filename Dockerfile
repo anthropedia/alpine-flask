@@ -3,6 +3,8 @@ MAINTAINER Christian Gatzlaff <cgatzlaff@gmail.com>
 
 # basic flask environment
 RUN apk add --update --no-cache bash git openssh nginx uwsgi uwsgi-python3 \
+	# Enable PIL / Pillow
+	build-base python-dev py-pip jpeg-dev zlib-dev \
 	&& pip3 install --upgrade pip \
 	&& pip3 install flask
 
